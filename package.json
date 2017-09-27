@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "babel-register": "^7.0.0-alpha.9"
+  },
+  "name": "ember-plugin-thingie",
+  "version": "1.0.0",
+  "main": "plugin.js",
+  "devDependencies": {
+    "babel-preset-env": "^2.0.0-alpha.7",
+    "codemod": "^0.0.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "codemod": "codemod --require babel-register -o index='{\"fileName\": \"route.js\"}' --plugin plugin.js route.js"
+  },
+  "author": "monkey on a plane",
+  "license": "ISC",
+  "description": "hallelujah"
+}
