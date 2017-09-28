@@ -2,7 +2,7 @@
   "dependencies": {
     "babel-register": "^7.0.0-alpha.9"
   },
-  "name": "ember-plugin-thingie",
+  "name": "transformember",
   "version": "1.0.0",
   "main": "plugin.js",
   "devDependencies": {
@@ -14,7 +14,7 @@
     "plugin": "codemod --require babel-register -o index='{\"fileName\": \"route.js\"}' --plugin plugin.js route.js",
     "another-plugin": "codemod --require babel-register -o index='{\"fileName\": \"controller.js\", \"removablePropName\": \"session\", \"removableValueName\": \"service\"}' --plugin another-plugin.js controller.js"
   },
-  "author": "monkey on a plane",
-  "license": "ISC",
-  "description": "hallelujah"
+  "author": "Sarup Banskota",
+  "license": "MIT",
+  "description": "Just a bunch of Ember plugins to help transform Ember stuff"
 }
