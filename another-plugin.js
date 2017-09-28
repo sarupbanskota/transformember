@@ -14,7 +14,7 @@ export default function({ types: t }) {
           console.log(propName);
           console.log(valueName);
           if (propName === 'session' && valueName === 'service') {
-            console.log("yo");
+            propIdentifier.remove();
           // remove above from object ^
           }
         }
