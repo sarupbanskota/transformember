@@ -14,6 +14,9 @@ export default function({ types: t }) {
           valueName = propIdentifier.node.value.callee.name;
         } catch(e) {
           console.log(fileName);
+          console.log(propName);
+          console.log(valueName);
+          console.log(options);
           console.log(e);
         } finally {
           console.log(propName);
