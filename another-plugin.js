@@ -1,3 +1,8 @@
+const options = JSON.parse(process.argv[5].replace(/index=/g,''));
+const fileName = options.fileName;
+const removablePropName = options.removablePropName;
+const removableValueName = options.removableValueName;
+
 export default function({ types: t }) {
   return {
     visitor: {
@@ -13,9 +18,8 @@ export default function({ types: t }) {
         } finally {
           console.log(propName);
           console.log(valueName);
-          if (propName === 'session' && valueName === 'service') {
+          if (propName === removablePropName && valueName === removableValueName) {
             propIdentifier.remove();
-          // remove above from object ^
           }
         }
       }
