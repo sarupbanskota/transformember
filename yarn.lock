@@ -84,6 +84,10 @@ ansi-styles@^3.0.0:
   dependencies:
     color-convert "^1.9.0"
 
+any-promise@^1.0.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/any-promise/-/any-promise-1.3.0.tgz#abc6afeedcea52e809cdc0376aed3ce39635d17f"
+
 anymatch@^1.3.0:
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/anymatch/-/anymatch-1.3.2.tgz#553dcb8f91e3c889845dfdba34c77721b90b9d7a"
@@ -147,6 +151,10 @@ ast-types@0.8.18:
   version "0.8.18"
   resolved "https://registry.yarnpkg.com/ast-types/-/ast-types-0.8.18.tgz#c8b98574898e8914e9d8de74b947564a9fe929af"
 
+ast-types@0.9.11:
+  version "0.9.11"
+  resolved "https://registry.yarnpkg.com/ast-types/-/ast-types-0.9.11.tgz#371177bb59232ff5ceaa1d09ee5cad705b1a5aa9"
+
 ast-types@0.9.4:
   version "0.9.4"
   resolved "https://registry.yarnpkg.com/ast-types/-/ast-types-0.9.4.tgz#410d1f81890aeb8e0a38621558ba5869ae53c91b"
@@ -205,6 +213,16 @@ babel-code-frame@^6.26.0:
     esutils "^2.0.2"
     js-tokens "^3.0.2"
 
+babel-codemod@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/babel-codemod/-/babel-codemod-1.2.0.tgz#a386bfc1b096bda02c51f74ce2e7e5001e00b8e7"
+  dependencies:
+    babel-core "^6.23.1"
+    glob "^7.1.1"
+    mz "^2.6.0"
+    recast "^0.12.1"
+    resolve "^1.3.2"
+
 babel-core@7.0.0-alpha.9:
   version "7.0.0-alpha.9"
   resolved "https://registry.yarnpkg.com/babel-core/-/babel-core-7.0.0-alpha.9.tgz#1868005f160dbcd2325e6b3472f3f9ea010a9313"
@@ -227,7 +245,7 @@ babel-core@7.0.0-alpha.9:
     slash "^1.0.0"
     source-map "^0.5.0"
 
-babel-core@^6.0.0, babel-core@^6.26.0:
+babel-core@^6.0.0, babel-core@^6.23.1, babel-core@^6.26.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-core/-/babel-core-6.26.0.tgz#af32f78b31a6fcef119c87b0fd8d9753f03a0bb8"
   dependencies:
@@ -978,7 +996,7 @@ convert-source-map@^1.1.0, convert-source-map@^1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/convert-source-map/-/convert-source-map-1.5.0.tgz#9acd70851c6d5dfdd93d9282e5edf94a03ff46b5"
 
-core-js@^2.4.0, core-js@^2.5.0:
+core-js@^2.4.0, core-js@^2.4.1, core-js@^2.5.0:
   version "2.5.1"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.5.1.tgz#ae6874dc66937789b80754ff5428df66819ca50b"
 
@@ -1253,7 +1271,7 @@ esprima@^2.7.1:
   version "2.7.3"
   resolved "https://registry.yarnpkg.com/esprima/-/esprima-2.7.3.tgz#96e3b70d5779f6ad49cd032673d1c312767ba581"
 
-esprima@^4.0.0:
+esprima@^4.0.0, esprima@~4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/esprima/-/esprima-4.0.0.tgz#4499eddcd1110e0b218bacf2fa7f7f59f55ca804"
 
@@ -1477,7 +1495,7 @@ glob-parent@^2.0.0:
   dependencies:
     is-glob "^2.0.0"
 
-glob@7.1.1, glob@^7.0.0, glob@^7.0.3, glob@^7.0.5:
+glob@7.1.1, glob@^7.0.0, glob@^7.0.3, glob@^7.0.5, glob@^7.1.1:
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.1.tgz#805211df04faaf1c63a3600306cdf5ade50b2ec8"
   dependencies:
@@ -2295,6 +2313,14 @@ mute-stream@0.0.5:
   version "0.0.5"
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.5.tgz#8fbfabb0a98a253d3184331f9e8deb7372fac6c0"
 
+mz@^2.6.0:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/mz/-/mz-2.7.0.tgz#95008057a56cafadc2bc63dde7f9ff6955948e32"
+  dependencies:
+    any-promise "^1.0.0"
+    object-assign "^4.0.1"
+    thenify-all "^1.0.0"
+
 natural-compare@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
@@ -2514,7 +2540,7 @@ pretty-format@^19.0.0:
   dependencies:
     ansi-styles "^3.0.0"
 
-private@^0.1.6, private@^0.1.7:
+private@^0.1.6, private@^0.1.7, private@~0.1.5:
   version "0.1.7"
   resolved "https://registry.yarnpkg.com/private/-/private-0.1.7.tgz#68ce5e8a1ef0a23bb570cc28537b5332aba63ef1"
 
@@ -2594,6 +2620,16 @@ readline2@^1.0.1:
     code-point-at "^1.0.0"
     is-fullwidth-code-point "^1.0.0"
     mute-stream "0.0.5"
+
+recast@^0.12.1:
+  version "0.12.6"
+  resolved "https://registry.yarnpkg.com/recast/-/recast-0.12.6.tgz#4b0fb82feb1d10b3bd62d34943426d9b3ed30d4c"
+  dependencies:
+    ast-types "0.9.11"
+    core-js "^2.4.1"
+    esprima "~4.0.0"
+    private "~0.1.5"
+    source-map "~0.5.0"
 
 rechoir@^0.6.2:
   version "0.6.2"
@@ -2829,7 +2865,7 @@ source-map@^0.4.4:
   dependencies:
     amdefine ">=0.0.4"
 
-source-map@^0.5.0, source-map@^0.5.3, source-map@^0.5.6, source-map@~0.5.1:
+source-map@^0.5.0, source-map@^0.5.3, source-map@^0.5.6, source-map@~0.5.0, source-map@~0.5.1:
   version "0.5.7"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.5.7.tgz#8a039d2d1021d22d1ea14c80d8ea468ba2ef3fcc"
 
@@ -2966,6 +3002,18 @@ test-exclude@^4.1.1:
 text-table@~0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
+
+thenify-all@^1.0.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/thenify-all/-/thenify-all-1.6.0.tgz#1a1918d402d8fc3f98fbf234db0bcc8cc10e9726"
+  dependencies:
+    thenify ">= 3.1.0 < 4"
+
+"thenify@>= 3.1.0 < 4":
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/thenify/-/thenify-3.3.0.tgz#e69e38a1babe969b0108207978b9f62b88604839"
+  dependencies:
+    any-promise "^1.0.0"
 
 throat@^3.0.0:
   version "3.2.0"

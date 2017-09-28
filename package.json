@@ -6,6 +6,7 @@
   "version": "1.0.0",
   "main": "plugin.js",
   "devDependencies": {
+    "babel-codemod": "^1.2.0",
     "babel-preset-env": "^2.0.0-alpha.7",
     "codemod": "^0.0.4"
   },
