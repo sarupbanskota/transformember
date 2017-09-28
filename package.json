@@ -7,8 +7,7 @@
   "main": "plugin.js",
   "devDependencies": {
     "babel-codemod": "^1.2.0",
-    "babel-preset-env": "^2.0.0-alpha.7",
-    "codemod": "^0.0.4"
+    "babel-preset-env": "^2.0.0-alpha.7"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
