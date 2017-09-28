@@ -10,12 +10,13 @@ export default function({ types: t }) {
             "object",                      // MemberExpression
             "property",                    // Identifier
             "name"                         // Route, Controller, Model etc
-          ].join("."));
+          ].join(".")).node;
         } catch(e) {
           console.log(fileName);
           console.log(e);
         } finally {
           const extension = `const { ${extensionIdentifier} } = Ember;`
+          console.log(extension);
           // insert above ^ after importDeclaration
         }
       }

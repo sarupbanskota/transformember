@@ -11,7 +11,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "codemod": "codemod --require babel-register -o index='{\"fileName\": \"route.js\"}' --plugin plugin.js route.js"
+    "plugin": "codemod --require babel-register -o index='{\"fileName\": \"route.js\"}' --plugin plugin.js route.js",
+    "another-plugin": "codemod --require babel-register -o index='{\"fileName\": \"controller.js\"}' --plugin another-plugin.js controller.js"
   },
   "author": "monkey on a plane",
   "license": "ISC",
