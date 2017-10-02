@@ -20,8 +20,13 @@ export default function({ types: t }) {
           const extensionProp = t.ObjectProperty(extensionId, extensionId, false, true, null); // true for shorthand
           const extensionObj = t.objectPattern([extensionProp]);
           const extensionDeclarator = t.variableDeclarator(extensionObj, emberId);
-          const extensionDeclaration = t.variableDeclaration('const', [extensionDeclarator]);
+          const extensionDeclaration = t.variableDeclaration("const", [extensionDeclarator]);
           path.insertBefore(extensionDeclaration);
+
+          const extendId = t.identifier("extend");
+          const callee = t.memberExpression(extensionId, extendId);
+          const originalCallee = path.get('declaration').get('callee');
+          originalCallee.replaceWith(callee);
         }
       }
     }
