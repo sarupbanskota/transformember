@@ -15,9 +15,13 @@ export default function({ types: t }) {
           console.log(fileName);
           console.log(e);
         } finally {
-          const extension = `const { ${extensionIdentifier} } = Ember;`
-          console.log(extension);
-          // insert above ^ after importDeclaration
+          const emberId = t.identifier("Ember");
+          const extensionId = t.identifier(extensionIdentifier);
+          const extensionProp = t.ObjectProperty(extensionId, extensionId, false, true, null); // true for shorthand
+          const extensionObj = t.objectPattern([extensionProp]);
+          const extensionDeclarator = t.variableDeclarator(extensionObj, emberId);
+          const extensionDeclaration = t.variableDeclaration('const', [extensionDeclarator]);
+          path.insertBefore(extensionDeclaration);
         }
       }
     }
